@@ -105,6 +105,10 @@ a {
   color: var(--coral);
 }
 
+.site-nav a[aria-current="page"] {
+  color: var(--coral);
+}
+
 .header-call {
   border: 1px solid var(--sage-dark);
   border-radius: 999px;
@@ -247,6 +251,45 @@ h1 {
   display: block;
   margin-top: 7px;
   font-size: 1rem;
+}
+
+.page-hero {
+  min-height: 54vh;
+  padding: 150px clamp(18px, 6vw, 80px) clamp(54px, 8vw, 92px);
+  background:
+    linear-gradient(90deg, rgba(24, 33, 31, 0.88), rgba(24, 33, 31, 0.68)),
+    url("assets/salon-hero.png") center / cover;
+  color: var(--white);
+}
+
+.page-hero h1 {
+  width: min(920px, 100%);
+  margin-bottom: 22px;
+}
+
+.page-hero p:not(.eyebrow) {
+  width: min(690px, 100%);
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+}
+
+.services-page-hero {
+  background:
+    linear-gradient(90deg, rgba(41, 72, 61, 0.92), rgba(41, 72, 61, 0.68)),
+    url("assets/salon-hero.png") center / cover;
+}
+
+.reviews-page-hero {
+  background:
+    linear-gradient(90deg, rgba(78, 52, 43, 0.9), rgba(78, 52, 43, 0.58)),
+    url("assets/salon-hero.png") center / cover;
+}
+
+.visit-page-hero {
+  background:
+    linear-gradient(90deg, rgba(24, 33, 31, 0.9), rgba(24, 33, 31, 0.62)),
+    url("assets/salon-hero.png") center / cover;
 }
 
 .section {
@@ -522,6 +565,11 @@ blockquote {
     padding-top: 154px;
   }
 
+  .page-hero {
+    min-height: 520px;
+    padding-top: 176px;
+  }
+
   .hero-shade {
     background:
       linear-gradient(0deg, rgba(21, 28, 26, 0.9) 0%, rgba(21, 28, 26, 0.72) 52%, rgba(21, 28, 26, 0.22) 100%);
@@ -562,7 +610,7 @@ blockquote {
 
 @media (max-width: 460px) {
   .site-nav {
-    gap: 14px;
+    gap: 12px;
     font-size: 0.86rem;
   }
 
